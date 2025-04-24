@@ -25,19 +25,19 @@ export class TicketPage implements OnInit
   constructor(private router:Router){ }
   ngOnInit() {
   }
-/*
+
   async onButtonClick() 
   {
     //console.log("Status: " + this.status);
-    await this.storage.create();
-    await this.storage.set('status', this.ticket);
-    this.router.navigateByUrl('/home')
+    //await this.storage.create();
+    //await this.storage.set('ticket', this.ticket);
+    //this.router.navigateByUrl('/home')
   }
 
   async ionViewWillEnter()
   {
-    await this.storage.create();
-    this.ticket = await this.storage.get('stickrt');
-  }*/
+    //await this.storage.create();
+    //this.ticket = await this.storage.get('ticket');
+  }
 
 }

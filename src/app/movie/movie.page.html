@@ -1,13 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>movie</ion-title>
+    <ion-title>Movie Page</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">movie</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<h2>Please Select what movie you want to watch.</h2>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="movie">
+      <ion-item>
+        <ion-label>Oppenheimer</ion-label>
+        <ion-radio value="Oppenheimer" slot="end"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mickey 17</ion-label>
+        <ion-radio value="Mickey 17" slot="end"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Shaun of the Dead</ion-label>
+        <ion-radio value="Shaun of the Dead" slot="end"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sinners</ion-label>
+        <ion-radio value="Sinners" slot="end"></ion-radio>
+      </ion-item>
+      
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)="onButtonClick()">Save</ion-button>
 </ion-content>
