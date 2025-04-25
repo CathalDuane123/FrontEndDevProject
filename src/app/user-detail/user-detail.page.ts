@@ -36,11 +36,15 @@ export class UserDetailPage implements OnInit
     //Attempt to keep the user on the page 
     // until they input a valid email address
 
-    if (!this.email.endsWith("@gmail.com"))
+    if (!this.email.endsWith("@gmail.com") && !this.email.endsWith("@atu.ie") )
     {
       alert("Invalid email address. Try again.")
     }
     else if (this.email.endsWith("@gmail.com"))
+    {
+      this.router.navigateByUrl('/home')
+    }
+    else if (this.email.endsWith("@atu.ie"))
     {
       this.router.navigateByUrl('/home')
     }

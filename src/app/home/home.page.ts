@@ -25,6 +25,32 @@ export class HomePage {
     this.ticket = await this.storage.get('ticket');
     this.email = await this.storage.get('email');
   }
+
+  async onButtonClick() 
+  {
+    //this.movie = await this.storage.get('movie');
+    //this.ticket = await this.storage.get('ticket');
+    //this.email = await this.storage.get('email');
+    
+    if (this.movie == "" || this.ticket == 0 || this.email == "")
+    {
+      alert("Please Enter details before purchase.");
+    }
+    else
+    {
+      alert("Thank you for your purchase.");
+      //await this.storage.remove("movie")
+      //await this.storage.remove("ticket")
+      //await this.storage.remove("email")
+      await this.storage.clear();
+
+      this.movie = "";
+      this.ticket = 0;
+      this.email = "";
+    }
+
+  }
+
 }
 
 //To run PWA locally: npx http-server www -p 8081

@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
   })
 export class TicketPage implements OnInit 
 {
-  ticket:number = 1;
+  ticket:number = 0;
 
   constructor(private storage:Storage, private router:Router) { }
   //constructor(private storage:Storage){ }
