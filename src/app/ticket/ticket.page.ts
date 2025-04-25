@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonBackButton, IonButtons, 
   IonItem, IonLabel, IonList, IonRadio, IonRadioGroup, IonButton } from '@ionic/angular/standalone';
-//import { Storage } from '@ionic/storage-angular';
+import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
 
 @Component
@@ -20,24 +20,25 @@ export class TicketPage implements OnInit
 {
   ticket:number = 1;
 
-  //constructor(private storage:Storage, private router:Router) { }
+  constructor(private storage:Storage, private router:Router) { }
   //constructor(private storage:Storage){ }
-  constructor(private router:Router){ }
+  //constructor(private router:Router){ }
   ngOnInit() {
   }
 
   async onButtonClick() 
   {
     //console.log("Status: " + this.status);
-    //await this.storage.create();
-    //await this.storage.set('ticket', this.ticket);
-    //this.router.navigateByUrl('/home')
+    await this.storage.create();
+    await this.storage.set('ticket', this.ticket);
+    alert("Thank you for your purchase.")
+    this.router.navigateByUrl('/home')
   }
 
   async ionViewWillEnter()
   {
-    //await this.storage.create();
-    //this.ticket = await this.storage.get('ticket');
+    await this.storage.create();
+    this.ticket = await this.storage.get('ticket');
   }
 
 }
