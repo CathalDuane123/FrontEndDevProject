@@ -25,7 +25,8 @@ export class TicketPage implements OnInit
   //constructor(private router:Router){ }
   ngOnInit() {
   }
-
+ 
+  //Code from movie selection is repeated for this file
   async onButtonClick() 
   {
     //console.log("Status: " + this.status);

@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!--Will take the user across all the different files-->
   <ion-button [routerLink]="['/ticket']">Click here to book tickets</ion-button>
   <br>
   <ion-button [routerLink]="['/movie']">Click here to select movie</ion-button>
@@ -14,6 +15,7 @@
   <ion-button [routerLink]="['/user-detail']">Click here to enter email address</ion-button>
 
   <br>
+  <!--Keeps track of what the user has inputed across the different paths-->
   <ion-title>Your Number of Tickets: {{ticket}}</ion-title>
   <br>
   <ion-title>Your Movie Choice: {{movie}}</ion-title>
@@ -23,5 +25,5 @@
 
   <br>
   <ion-button (click)="onButtonClick()">Click here to continue with purchase</ion-button>
-  
+  <!--Clears the selection-->
 </ion-content>

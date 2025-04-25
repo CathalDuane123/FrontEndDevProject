@@ -30,28 +30,32 @@ export class UserDetailPage implements OnInit
   async onButtonClick() 
   {
     //console.log("Status: " + this.status);
-    await this.storage.create();
-    await this.storage.set('email', this.email);
+    //await this.storage.create();
+    //await this.storage.set('email', this.email);
 
     //Attempt to keep the user on the page 
     // until they input a valid email address
-
     if (!this.email.endsWith("@gmail.com") && !this.email.endsWith("@atu.ie") )
     {
       alert("Invalid email address. Try again.")
     }
     else if (this.email.endsWith("@gmail.com"))
     {
+      await this.storage.create();
+      await this.storage.set('email', this.email);
       this.router.navigateByUrl('/home')
     }
     else if (this.email.endsWith("@atu.ie"))
     {
+      await this.storage.create();
+      await this.storage.set('email', this.email);
       this.router.navigateByUrl('/home')
     }
 
     //this.router.navigateByUrl('/home')
   }
 
+  //Process for saving address is the same as movie
   async ionViewWillEnter()
   {
     await this.storage.create();

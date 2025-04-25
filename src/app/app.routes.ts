@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+//All the different paths in the project
 export const routes: Routes = [
   {
     path: 'home',

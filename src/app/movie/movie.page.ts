@@ -26,6 +26,7 @@ export class MoviePage implements OnInit
   ngOnInit() {
   }
 
+  //Saves what the user entered
   async onButtonClick() 
   {
     //console.log("Status: " + this.status);
@@ -35,6 +36,7 @@ export class MoviePage implements OnInit
     this.router.navigateByUrl('/home')
   }
 
+  //Keeps track of what the user previously entered
   async ionViewWillEnter()
   {
     await this.storage.create();

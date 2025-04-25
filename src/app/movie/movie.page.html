@@ -4,14 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
+<!--Source for pictures: Wikipedia-->
 <ion-content [fullscreen]="true">
 <h2>Please Select what movie you want to watch.</h2>
-<h2>Scroll down to save the movie.</h2>
+<h2>Scroll down and click button to save the movie.</h2>
   <ion-list>
     <ion-radio-group [(ngModel)]="movie">
       <ion-item>
         <ion-label>Oppenheimer</ion-label>
         <div>
+          
           <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Oppenheimer_%28film%29.jpg/250px-Oppenheimer_%28film%29.jpg">
         </div>
         <ion-radio value="Oppenheimer" slot="end"></ion-radio>
@@ -41,5 +43,6 @@
     </ion-radio-group>
   </ion-list>
 
+  <!--Saves whatever movie the user clicks-->
   <ion-button (click)="onButtonClick()">Save</ion-button>
 </ion-content>
