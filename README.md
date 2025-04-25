@@ -1,6 +1,6 @@
 ID: G00430973 
 
-Front End Web Developmet Project 
+Front End Web Development Project 
 
 User Guide:
 
